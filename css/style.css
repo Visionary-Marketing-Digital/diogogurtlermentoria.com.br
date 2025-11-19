@@ -9744,6 +9744,7 @@ color: #e35637;}
 .countdown__timer {
     display: flex;
     gap: 25px;
+    justify-content: center;
     margin-top: 25px;
     flex-wrap: wrap;
 }
