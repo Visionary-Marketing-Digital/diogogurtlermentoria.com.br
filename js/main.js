@@ -26,7 +26,7 @@ AOS.init({
 
     // loader
     var loader = function() {
-        setTimeout(function() { 
+        setTimeout(function() {
             if($('#ftco-loader').length > 0) {
                 $('#ftco-loader').removeClass('show');
             }
@@ -45,7 +45,7 @@ AOS.init({
             if ( $('#ftco-nav').is(':visible') ) {
                 $(this).removeClass('active');
             } else {
-                $(this).addClass('active');	
+                $(this).addClass('active');
             }
         });
 
@@ -62,7 +62,7 @@ AOS.init({
         });
     };
     onePageClick();
-    
+
     var carousel = function() {
         $('.home-slider').owlCarousel({
             loop: false,
@@ -112,9 +112,9 @@ AOS.init({
 
             if (st > 150) {
                 if (!navbar.hasClass('scrolled')) {
-                    navbar.addClass('scrolled');	
+                    navbar.addClass('scrolled');
                 }
-            } 
+            }
             if (st < 150) {
                 if (navbar.hasClass('scrolled')) {
                     navbar.removeClass('scrolled sleep');
@@ -122,7 +122,7 @@ AOS.init({
             } 
             if (st > 350) {
                 if (!navbar.hasClass('awake')) {
-                    navbar.addClass('awake');	
+                    navbar.addClass('awake');
                 }
                 if(sd.length > 0) {
                     sd.addClass('sleep');
@@ -164,7 +164,7 @@ AOS.init({
         var i = 0;
         $('.ftco-animate').waypoint(function(direction) {
             if(direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-                
+
                 i++;
 
                 $(this.element).addClass('item-animate');

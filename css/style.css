@@ -9744,14 +9744,13 @@ color: #e35637;}
 .countdown__timer {
     display: flex;
     gap: 25px;
-    justify-content: center;
     margin-top: 25px;
-    flex-wrap: wrap; /* ESSENCIAL PARA RESPONSIVIDADE */
+    flex-wrap: wrap;
 }
 
 .countdown__item {
     text-align: center;
-    min-width: 90px; /* garante alinhamento bonito */
+    min-width: 90px;
 }
 
 .countdown__item span {
