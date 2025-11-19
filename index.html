@@ -359,62 +359,8 @@
 	<!-- Loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-  <script>
-	document.addEventListener('DOMContentLoaded', function () {
-
-    // ANO, MÊS (0-11), DIA, HORA, MIN, SEG
-    // Novembro = 10
-    const eventDate = new Date(2025, 10, 28, 20, 0, 0);
-
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
-
-        if (distance <= 0) {
-            document.getElementById("contador").innerHTML = "O evento já começou!";
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("dias").textContent = days.toString().padStart(2, '0');
-        document.getElementById("horas").textContent = hours.toString().padStart(2, '0');
-        document.getElementById("minutos").textContent = minutes.toString().padStart(2, '0');
-        document.getElementById("segundos").textContent = seconds.toString().padStart(2, '0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-});
-
-  </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-<script>
-$(document).ready(function() {
-    $('.video-popup').magnificPopup({
-        type: 'inline',
-        midClick: true,
-        callbacks: {
-            open: function() {
-                var video = document.getElementById('meuVideo');
-                video.currentTime = 0;
-                video.play();
-            },
-            close: function() {
-                var video = document.getElementById('meuVideo');
-                video.pause();
-                video.currentTime = 0;
-            }
-        }
-    });
-});
-</script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
