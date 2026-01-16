@@ -9907,3 +9907,27 @@ color: #e35637;}
   color:#fcf8e3;
   text-align: left;
 }
+
+@media (max-width: 580px) {
+  .banner-topo img {
+    display: none;
+  }
+}
+
+.one-third.img {
+  background-image: url(images/diogo-capa3.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlay somente em telas menores que 996px */
+@media (max-width: 996px) {
+  .one-third.img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+}
