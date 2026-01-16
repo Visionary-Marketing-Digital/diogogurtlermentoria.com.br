@@ -9931,3 +9931,21 @@ color: #e35637;}
     z-index: 1;
   }
 }
+/* Mobile */
+@media (max-width: 700px) {
+  #home-section .text p a.btn {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    width: calc(100% - 20px);
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  #home-section .text p {
+    margin: 0;
+    padding: 0;
+  }
+}
