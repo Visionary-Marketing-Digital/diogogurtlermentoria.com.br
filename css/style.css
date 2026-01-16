@@ -9866,9 +9866,19 @@ color: #e35637;}
     z-index: 99999;
 }
 
-/* video com borda arredondada opcional */
+/* Container do modal */
+#videoModal {
+	max-width: 90vw;
+	max-height: 90vh;
+	margin: auto;
+}
+
+/* Vídeo */
 #videoModal video {
-    border-radius: 12px;
+	width: 100%;
+	height: auto;
+	max-height: 90vh;
+	border-radius: 12px; /* mantém sua borda */
 }
 
 .mfp-close {
