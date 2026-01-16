@@ -9890,3 +9890,10 @@ color: #e35637;}
     outline: none !important;
     box-shadow: none !important;
 }
+
+.text-card{
+  font-size: 13px;
+  font-weight: 400;
+  color:#fcf8e3;
+  text-align: left;
+}
