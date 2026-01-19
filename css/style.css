@@ -8274,7 +8274,7 @@ h1, h2, h3, h4, h5,
       color: #e35637; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #F5782A !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8620,21 +8620,31 @@ h1, h2, h3, h4, h5,
         .owl-carousel.home-slider .owl-dots .owl-dot.active {
           background: #fff; }
 
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
 .hero-wrap {
   width: 100%;
   height: 100%;
-  position: inherit;
+  position: relative;
   background-size: cover;
-  background-repeat: no-repeat; }
-  .hero-wrap .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: 0;
-    background: #000000; }
+  background-repeat: no-repeat;
+}
+
+.hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  background: #000000;
+}
+
 
 .slider-text h1 {
   font-size: 48px;
@@ -9908,12 +9918,6 @@ color: #e35637;}
   text-align: left;
 }
 
-@media (max-width: 580px) {
-  .banner-topo img {
-    display: none;
-  }
-}
-
 .one-third.img {
   background-image: url(images/diogo-capa3.png);
   background-size: cover;
@@ -9932,21 +9936,16 @@ color: #e35637;}
   }
 }
 
-@media (max-width: 700px) {
-  #home-section .text p {
-    margin: 0;
-    padding: 0;
+@media (max-width: 992px) {
+  .hero{
+    padding-top: 0px;
   }
 }
 
 @media (max-width: 700px) {
-  body {
-    margin-top: 0 !important;
-  }
-
-  #home-section {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  #home-section .text p {
+    margin: 0;
+    padding: 0;
   }
 }
 
