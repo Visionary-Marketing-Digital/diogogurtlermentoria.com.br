@@ -9939,7 +9939,7 @@ color: #e35637;}
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
   }
 }
@@ -9996,7 +9996,7 @@ color: #e35637;}
 
   /* Botão */
   #home-section .btn {
-    margin-top: 40px !important;
+    margin-top: 0px !important;
     font-size: 12px;
     padding: 1px 2px;
     width: 80%;
@@ -10015,6 +10015,40 @@ color: #e35637;}
   }
 }
 
+/* Colocar imagem no cabeçalho para mobile */
+.mobile-hero-image {
+  display: none;
+}
+
+@media (max-width: 650px) {
+
+  .slider-item {
+    position: relative;
+  }
+
+  .mobile-hero-image {
+    display: block;
+    position: absolute;
+
+    right: 0px;
+    bottom: 30px;
+
+    width: 350px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .mobile-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+    .one-third.img {
+    background-image: none !important;
+  }
+
+}
 
 /* Animação */
 
