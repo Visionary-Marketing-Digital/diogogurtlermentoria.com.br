@@ -8934,7 +8934,7 @@ h1, h2, h3, h4, h5,
   z-index: 1;
 }
 .ftco-hireme:before {
-    z-index: -1 !important; 
+    z-index: -1 !important;
 }
   .ftco-hireme h2 {
     color: #fff;
@@ -9957,7 +9957,7 @@ color: #e35637;}
   background: #fff;
   max-width: 420px;
   margin: 10vh auto;
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
   text-align: center;
   z-index: 2;
@@ -9965,13 +9965,13 @@ color: #e35637;}
 
 .lead-modal-content input {
   width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+  margin: 8px 0;
+  padding: 8px;
 }
 
 .lead-modal-content button {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .lead-modal-close {
