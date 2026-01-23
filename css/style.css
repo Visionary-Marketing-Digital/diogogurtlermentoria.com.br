@@ -9939,8 +9939,33 @@ color: #e35637;}
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
     z-index: 1;
+  }
+}
+
+/* Escondido por padrão (desktop) */
+.btn-mentoria-mobile {
+  display: none;
+}
+
+/* Botão da área Vantaens - aparece só no mobile */
+@media (max-width: 650px) {
+  .btn-mentoria-mobile {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    background: white;
+    color: #e35637;
+  }
+}
+
+@media (max-width: 650px) {
+  .btn-mentoria-mobile:hover{
+    background:#E5A78E;
+    color: white;
   }
 }
 
@@ -10043,11 +10068,6 @@ color: #e35637;}
     height: auto;
     display: block;
   }
-
-    .one-third.img {
-    background-image: none !important;
-  }
-
 }
 
 /* Animação */
