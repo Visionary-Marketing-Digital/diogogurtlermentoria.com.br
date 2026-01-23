@@ -9933,6 +9933,63 @@ color: #e35637;}
   position: relative;
 }
 
+
+/*Modal formulário*/
+.lead-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.lead-modal.active {
+  display: block;
+}
+
+.lead-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+
+.lead-modal-content {
+  position: relative;
+  background: #fff;
+  max-width: 420px;
+  margin: 10vh auto;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 2;
+}
+
+.lead-modal-content input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.lead-modal-content button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.lead-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.download-box {
+  display: none;
+  margin-top: 20px;
+}
+
+
 /* Overlay somente em telas menores que 996px */
 @media (max-width: 996px) {
   .one-third.img::before {
@@ -9949,7 +10006,7 @@ color: #e35637;}
   display: none;
 }
 
-/* Botão da área Vantaens - aparece só no mobile */
+/* Botão da área Vantagens - aparece só no mobile */
 @media (max-width: 650px) {
   .btn-mentoria-mobile {
     display: inline-block;

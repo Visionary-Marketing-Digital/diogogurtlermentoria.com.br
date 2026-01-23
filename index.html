@@ -435,6 +435,46 @@
 		</video>
 	</div>
 
+	<!-- Modal Lead -->
+	<div id="leadModal" class="lead-modal">
+		<div class="lead-modal-overlay"></div>
+
+		<div class="lead-modal-content">
+			<button class="lead-modal-close">&times;</button>
+
+			<h3 style="color: #e35637; margin-top: 40px;">Ganhe seu e-book gratuito</h3>
+			<p>Preencha o formulário e receba o e-book
+			<strong>10 vendas</strong>
+			</p>
+
+			<!-- Formulário -->
+			<form id="leadForm"
+			action="https://docs.google.com/forms/d/e/SEU_FORM_ID/formResponse"
+			method="POST"
+			target="hidden_iframe">
+
+			<input type="text" name="entry.NOME" placeholder="Seu nome" required>
+			<input type="email" name="entry.EMAIL" placeholder="Seu e-mail" required>
+			<input type="tel" name="entry.TEL" placeholder="WhatsApp" required>
+			<input type="text" name="entry.CIDADE" placeholder="Cidade" required>
+
+			<button class="btn btn-primary" type="submit" id="leadSubmit">
+				Quero meu e-book
+			</button>
+			</form>
+
+			<!-- Download -->
+			<div id="downloadBox" class="download-box">
+			<p>Pronto! Seu e-book está disponível 👇</p>
+			<a href="ebooks/ebook-10-vendas.pdf" download class="btn btn-primary">
+				Baixar e-book
+			</a>
+			</div>
+		</div>
+	</div>
+
+	<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 	<!-- Botão de Whatsapp -->
     <a href="https://wa.me/5519999193825?text=Quero%20participar%20do%20grupo%20vip%20construtor%20pro." class="whatsapp-float" target="_blank" aria-label="Conversar no WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
@@ -458,6 +498,38 @@
 		}
 	});
   </script>
+
+  <script>
+	let modalShown = false;
+
+	window.addEventListener("scroll", () => {
+	if (window.scrollY > 500 && !modalShown) {
+		document.getElementById("leadModal").classList.add("active");
+		modalShown = true;
+	}
+	});
+
+	// Fechar modal
+	document.querySelector(".lead-modal-close").onclick = closeModal;
+	document.querySelector(".lead-modal-overlay").onclick = closeModal;
+
+	function closeModal() {
+	document.getElementById("leadModal").classList.remove("active");
+	}
+
+	// Envio do formulário
+	document.getElementById("leadForm").addEventListener("submit", function () {
+	const btn = document.getElementById("leadSubmit");
+	btn.innerText = "Enviando...";
+	btn.disabled = true;
+
+	setTimeout(() => {
+		document.getElementById("leadForm").style.display = "none";
+		document.getElementById("downloadBox").style.display = "block";
+	}, 1500);
+	});
+  </script>
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
