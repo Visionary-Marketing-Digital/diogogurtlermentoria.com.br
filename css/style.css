@@ -9976,8 +9976,8 @@ color: #e35637;}
 
 .lead-modal-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: -5px;
+  right: 1px;
   border: none;
   background: none;
   font-size: 26px;
@@ -9988,7 +9988,6 @@ color: #e35637;}
   display: none;
   margin-top: 20px;
 }
-
 
 /* Overlay somente em telas menores que 996px */
 @media (max-width: 996px) {

@@ -119,7 +119,7 @@ AOS.init({
                 if (navbar.hasClass('scrolled')) {
                     navbar.removeClass('scrolled sleep');
                 }
-            } 
+            }
             if (st > 350) {
                 if (!navbar.hasClass('awake')) {
                     navbar.addClass('awake');
@@ -239,33 +239,3 @@ AOS.init({
     });
 
 })(jQuery);
-
-// =========================
-// COUNTDOWN
-// =========================
-document.addEventListener('DOMContentLoaded', function () {
-    const eventDate = new Date(2025, 10, 28, 20, 0, 0);
-
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
-
-        if (distance <= 0) {
-            document.getElementById("contador").innerHTML = "O evento já começou!";
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("dias").textContent = days.toString().padStart(2, '0');
-        document.getElementById("horas").textContent = hours.toString().padStart(2, '0');
-        document.getElementById("minutos").textContent = minutes.toString().padStart(2, '0');
-        document.getElementById("segundos").textContent = seconds.toString().padStart(2, '0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-});

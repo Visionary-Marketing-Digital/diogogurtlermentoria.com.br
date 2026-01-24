@@ -442,21 +442,21 @@
 		<div class="lead-modal-content">
 			<button class="lead-modal-close">&times;</button>
 
-			<h4 style="color: #e35637; margin-top: 40px;">Ganhe seu e-book gratuito</h4>
-			<p>Preencha o formulário e receba o e-book
-			<strong>10 vendas</strong>
+			<h4 style="color: #e35637; margin-top: 30px;">Ganhe seu e-book gratuito</h4>
+			<p style="margin-bottom: 0;">Preencha o formulário e receba o e-book:
+			<strong><br>10 vendas</strong>
 			</p>
 
 			<!-- Formulário -->
 			<form id="leadForm"
-			action="https://docs.google.com/forms/d/e/SEU_FORM_ID/formResponse"
+			action="https://script.google.com/macros/s/AKfycby8kAFEk4mKehUMZ8ZnRfZIgZWf4uz46DcbJ0IGgnESOTdRV3Za7rpJs0dDDHb4rJ_kWg/exec"
 			method="POST"
 			target="hidden_iframe">
 
-			<input type="text" name="entry.NOME" placeholder="Seu nome" required>
-			<input type="email" name="entry.EMAIL" placeholder="Seu e-mail" required>
-			<input type="tel" name="entry.TEL" placeholder="WhatsApp" required>
-			<input type="text" name="entry.CIDADE" placeholder="Cidade" required>
+			<input type="text" name="nome" placeholder="Seu nome" required>
+			<input type="email" name="email" placeholder="Seu e-mail" required>
+			<input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+			<input type="text" name="cidade" placeholder="Cidade" required>
 
 			<button class="btn btn-primary" type="submit" id="leadSubmit">
 				Quero meu e-book
