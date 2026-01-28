@@ -344,23 +344,33 @@
 
 		<div class="row no-gutters block-9">
 		<div class="col-md-6 order-md-last d-flex">
-			<form action="#" class=" p-4 p-md-5 contact-form">
+			<form action="https://formsubmit.co/contato@mentoriaconstrutorpro.com.br" method="POST" class="p-4 p-md-5 contact-form" id="contactForm">
+
+			<input type="hidden" name="_captcha" value="false">
+
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Seu nome">
+				<input type="text" name="nome" class="form-control" placeholder="Seu nome" required>
 			</div>
+
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Seu e-mail">
+				<input type="email" name="email" class="form-control" placeholder="Seu e-mail" required>
 			</div>
+
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Assunto">
+				<input type="text" name="assunto" class="form-control" placeholder="Assunto">
 			</div>
+
 			<div class="form-group">
-				<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Digite sua mensagem"></textarea>
+				<textarea name="mensagem" class="form-control" rows="7" placeholder="Digite sua mensagem" required></textarea>
 			</div>
+
 			<div class="form-group">
-				<input type="submit" value="Enviar mensagem" class="btn btn-primary py-3 px-5 mt-2" style="width: 100%;">
+				<button type="submit" id="submitBtn" class="btn btn-primary py-3 px-5 mt-2 w-100">
+				Enviar mensagem
+				</button>
 			</div>
 			</form>
+
 		</div>
 
 		<div class="col-md-6 d-flex">
@@ -427,6 +437,21 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Modal mensagem de Sucesso -->
+	<div class="modal fade" id="successModal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content text-center p-4">
+		<div class="modal-body">
+			<h3 class="mb-3" style="color: #e35637;">✅ Mensagem enviada!</h3>
+			<p>
+			Recebemos sua mensagem com sucesso.<br>
+			Em breve entraremos em contato 😉
+			</p>
+		</div>
+		</div>
+	</div>
+	</div>
 
 	<!-- Modal Vídeo -->
 	<div id="videoModal" class="mfp-hide video-modal">
@@ -499,7 +524,56 @@
 	});
   </script>
 
-<!-- Modal -->
+  <!-- Modal mensagem de sucesso -->
+  <script>
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function (e) {
+e.preventDefault(); // 🚨 IMPEDE redirecionamento do FormSubmit
+
+// Loading no botão
+btn.disabled = true;
+btn.innerHTML = `
+	<span class="spinner-border spinner-border-sm me-2"></span>
+	Enviando...
+`;
+
+// Envio via fetch (AJAX)
+fetch(form.action, {
+	method: "POST",
+	body: new FormData(form),
+	headers: {
+	"Accept": "application/json"
+	}
+})
+.then(response => {
+	if (response.ok) {
+	const modal = new bootstrap.Modal(
+		document.getElementById("successModal")
+	);
+	modal.show();
+
+	// Fecha modal e redireciona
+	setTimeout(() => {
+		modal.hide();
+		window.location.href = "index.html";
+	}, 4000);
+	} else {
+	alert("Erro ao enviar. Tente novamente.");
+	btn.disabled = false;
+	btn.innerHTML = "Enviar mensagem";
+	}
+})
+.catch(() => {
+	alert("Erro de conexão. Tente novamente.");
+	btn.disabled = false;
+	btn.innerHTML = "Enviar mensagem";
+});
+});
+  </script>
+
+  <!-- Modal -->
   <script>
 	let modalShown = false;
 
